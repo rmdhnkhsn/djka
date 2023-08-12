@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="UTF-8">
+        <title> Dashboard DJKA</title>
+        <link rel="stylesheet" href="css/font/poppins.css">
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="css/datatables/dt.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    <nav class="navbar">
+        <div class="navStart">
+            <div class="nav-toggle">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+        <div class="navEnd">
+            <img src="img/logo/dishub.svg" alt="" class="dishubImg">
+            <img src="img/logo/djka.svg" alt="" class="djkaImg">
+        </div>
+    </nav>
+    <div id="backdrop" class="">
+        <button class="hideBar"></button>
+    </div>
+    <div id="sideBar" class="sidebar">
+        <div class="sideLogo">
+            <img src="img/logo/dishub.svg" alt="" class="dishubImg">
+            <img src="img/logo/djka.svg" alt="" class="djkaImg">
+        </div>
+        <ul class="nav-links">
+            <div class="titleNav">Beranda</div>
+            <li class="nav-menu menu-link">
+                <a href="#">
+                    <div class="nav-icon">
+                        <i class="bi bi-pie-chart"></i>
+                    </div>
+                    <span class="link_name">Dashboard</span>
+                </a>
+            </li>
+            <div class="titleNav mt-3">Master Data</div>
+            <li class="nav-menu menu-link">
+                <a href="#">
+                    <div class="nav-icon">
+                        <i class="bi bi-compass"></i>
+                    </div>
+                    <span class="link_name">Location</span>
+                </a>
+            </li>
+            <li class="nav-menu menu-link">
+                <a href="#">
+                    <div class="nav-icon">
+                        <i class="bi bi-inboxes-fill"></i>
+                    </div>
+                    <span class="link_name">Aset Sarana</span>
+                </a>
+            </li>
+            <li class="nav-menu menu-link">
+                <a href="#">
+                    <div class="nav-icon">
+                        <i class="bi bi-tools"></i>
+                    </div>
+                    <span class="link_name">Tools</span>
+                </a>
+            </li>
+            <li class="nav-menu menu-link">
+                <a href="#">
+                    <div class="nav-icon">
+                        <i class="bi bi-gear-wide-connected"></i>
+                    </div>
+                    <span class="link_name">Spare Part</span>
+                </a>
+            </li>
+            <li class="nav-menu menu-link">
+                <a href="#">
+                    <div class="nav-icon">
+                        <i class="bi bi-person-lines-fill"></i>
+                    </div>
+                    <span class="link_name">SDM</span>
+                </a>
+            </li>
+        </ul>
+        <div class="containerAccount">
+            <img src="img/user.jpg" alt="">
+            <div class="containerText">
+                <div class="name">Hendra Sugandi</div>
+                <div class="job">System Administrator</div>
+            </div>
+            <a href="login.html"><i class="bi bi-box-arrow-right"></i></a>
+        </div>
+    </div>
+    <section class="content">
+        <div class="row mt-4">
+            <div class="col-12 mb-4">
+                <div class="title-dashboard">Dashboard</div>
+            </div>
+            <div class="col-lg-8">
+                <div class="containerStatus">
+                    <div class="statusCard">
+                        <div class="containerIcon">
+                            <div class="icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <img src="img/shape/cicle4.svg" alt="" class="circle4">
+                        </div>
+                        <div class="count">100</div>
+                        <div class="desc">Total Pengguna</div>
+                        <img src="img/shape/shape-status.svg" alt="" class="shape">
+                    </div>
+                    <div class="statusCard">
+                        <div class="containerIcon">
+                            <div class="icon">
+                                <i class="bi bi-journal-minus"></i>
+                            </div>
+                            <img src="img/shape/cicle4.svg" alt="" class="circle4">
+                        </div>
+                        <div class="count">1.203</div>
+                        <div class="desc">Laporan Sarana</div>
+                        <img src="img/shape/shape-status.svg" alt="" class="shape">
+                    </div>
+                    <div class="statusCard">
+                        <div class="containerIcon">
+                            <div class="icon">
+                                <i class="bi bi-journal-medical"></i>
+                            </div>
+                            <img src="img/shape/cicle4.svg" alt="" class="circle4">
+                        </div>
+                        <div class="count">45</div>
+                        <div class="desc">Total Sertifikat</div>
+                        <img src="img/shape/shape-status.svg" alt="" class="shape">
+                    </div>
+                    <div class="statusCard">
+                        <div class="containerIcon">
+                            <div class="icon">
+                                <i class="bi bi-person-fill-up"></i>
+                            </div>
+                            <img src="img/shape/cicle4.svg" alt="" class="circle4">
+                        </div>
+                        <div class="count">100</div>
+                        <div class="desc">Pekerjaan</div>
+                        <img src="img/shape/shape-status.svg" alt="" class="shape">
+                    </div>
+                    <div class="statusCard">
+                        <div class="containerIcon">
+                            <div class="icon">
+                                <i class="bi bi-check2-square"></i>
+                            </div>
+                            <img src="img/shape/cicle4.svg" alt="" class="circle4">
+                        </div>
+                        <div class="count">100</div>
+                        <div class="desc">Persetujuan</div>
+                        <img src="img/shape/shape-status.svg" alt="" class="shape">
+                    </div>
+                </div>
+                <div class="cardPart">
+                    <div class="cardHead">
+                        <div class="titleCard">Schedule Pekerjaan</div>
+                    </div>
+                    <div class="cardBody">
+                        <table class="table" id="DTtable">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Sarana</th>
+                                    <th>Tanggal</th>
+                                    <th>Pelaksana</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Lokomotif</td>
+                                    <td>12/12/23</td>
+                                    <td>Teknisi A</td>
+                                    <td>
+                                        <div class="btn-act">
+                                            <a href="" class="btn-yellow"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="" class="btn-red"><i class="bi bi-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Lokomotif</td>
+                                    <td>12/12/23</td>
+                                    <td>Teknisi A</td>
+                                    <td>
+                                        <div class="btn-act">
+                                            <a href="" class="btn-yellow"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="" class="btn-red"><i class="bi bi-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Lokomotif</td>
+                                    <td>12/12/23</td>
+                                    <td>Teknisi A</td>
+                                    <td>
+                                        <div class="btn-act">
+                                            <a href="" class="btn-yellow"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="" class="btn-red"><i class="bi bi-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Lokomotif</td>
+                                    <td>12/12/23</td>
+                                    <td>Teknisi A</td>
+                                    <td>
+                                        <div class="btn-act">
+                                            <a href="" class="btn-yellow"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="" class="btn-red"><i class="bi bi-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Lokomotif</td>
+                                    <td>12/12/23</td>
+                                    <td>Teknisi A</td>
+                                    <td>
+                                        <div class="btn-act">
+                                            <a href="" class="btn-yellow"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="" class="btn-red"><i class="bi bi-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Lokomotif</td>
+                                    <td>12/12/23</td>
+                                    <td>Teknisi A</td>
+                                    <td>
+                                        <div class="btn-act">
+                                            <a href="" class="btn-yellow"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="" class="btn-red"><i class="bi bi-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Lokomotif</td>
+                                    <td>12/12/23</td>
+                                    <td>Teknisi A</td>
+                                    <td>
+                                        <div class="btn-act">
+                                            <a href="" class="btn-yellow"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="" class="btn-red"><i class="bi bi-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <div class="accordion">
+                  <div class="accordionHead">
+                    <div class="title">Frequently Asked Questions (FAQ)</div>
+                    <i class="bi bi-arrow-right-circle"></i>
+                  </div>
+                  <div class="accordionBody">
+                    <div class="accordionContent">
+                        <p class="text">Pertanyaan Seputar Luar Angkasa</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-blur">
+                    <div class="containerKnob">
+                        <div class="title">Schedule Outstanding</div>
+                        <input type="text" class="dial" value="60" disabled>
+                        <div class="containerLegend">
+                            <div class="legend">
+                                <div class="square1"></div>
+                                <div class="text">Terealisasi</div>
+                            </div>
+                            <div class="legend">
+                                <div class="square2"></div>
+                                <div class="text">Belum Terealisasi</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="containerBar ">
+                        <div class="title">Schedule Outstanding</div>
+                        <div id="barChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="img/shape/shape-dashboard.svg" alt="" class="shapeDash">
+    </section>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap-5.3.2.min.js"></script>
+    <script src="js/datatables/dt.js"></script>
+    <script src="js/apexchart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
+    <script src="js/script.js"></script>
+    
+
+    <script>
+        var chartInit;
+    
+        $(document).ready(function () {
+
+            $('#DTtable').DataTable({
+                aLengthMenu: [
+                    [5, 10, 25, 50, -1],
+                    [5, 10, 25, 50, "All"]
+                ],
+                processing: true,
+                pageLength: 5,
+                responsive: true,
+                bInfo: false,
+                language: {
+                    'lengthMenu': 'Sort _MENU_',
+                }
+            });
+            
+            $(".dial").knob({
+                "readOnly": true,
+                lineCap: 'round',
+                thickness: 0.4,
+                fgColor: '#2E9CFF',
+                bgColor: '#E3F1FF',
+                width: 150,
+                height: 150,
+                draw: function () {
+                    $(this.i).css('position', 'absolute').css('font-size', '28px').css('font-weight', '500').css('color', '#007bff').css('font-family', 'poppins');
+                    $(this.i).val(this.cv + '%');
+                }
+            });
+
+            var options = {
+                chart: {
+                    height: 300,
+                    type: "bar",
+                    toolbar: {
+                        show: false
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Total',
+                    data: [{
+                        x: 'Terealisasi',
+                        y: 30,
+                        fillColor: '#2E9CFF'
+                    },
+                    {
+                        x: 'Belum Terealisasi',
+                        y: 80,
+                        fillColor: '#d1e9ff'
+                    }],
+            
+                }],
+                xaxis: {
+                    categories: ['Terealisasi','Belum Terealisasi']
+                }
+            };
+
+            chartInit = new ApexCharts(document.querySelector("#barChart"), options);
+            chartInit.render();
+        })
+        
+    </script>
+</body>
+</html>
