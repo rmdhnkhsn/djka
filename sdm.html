@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="UTF-8">
+        <title> SDM DJKA</title>
+        <link rel="stylesheet" href="css/font/poppins.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/datatables/dt.css">
+        <link rel="stylesheet" href="css/sweetalert.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    <nav class="navbar">
+        <div class="navStart">
+            <div class="nav-toggle">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+        <div class="navEnd">
+            <img src="img/logo/dishub.svg" alt="" class="dishubImg">
+            <img src="img/logo/djka.svg" alt="" class="djkaImg">
+        </div>
+    </nav>
+    <div id="backdrop" class="">
+        <button class="hideBar"></button>
+    </div>
+    <div id="sideBar" class="sidebar">
+        <div class="sideLogo">
+            <img src="img/logo/dishub.svg" alt="" class="dishubImg">
+            <img src="img/logo/djka.svg" alt="" class="djkaImg">
+        </div>
+        <ul class="nav-links">
+            <!-- <div class="titleNav">Beranda</div> -->
+            <li class="nav-menu menu-link">
+                <a href="#">
+                    <div class="nav-icon">
+                        <i class="bi bi-pie-chart"></i>
+                    </div>
+                    <span class="link_name">Dashboard</span>
+                </a>
+            </li>
+            <!-- <div class="titleNav mt-3">Master Data</div> -->
+            <li class="nav-menu menu-down">
+                <div class="arrow-link">
+                    <a href="#">
+                        <div class="nav-name">
+                            <div class="link_name">Master Data</div>
+                            <i class="bi bi-chevron-right arrow"></i>
+                        </div>
+                    </a>
+                </div>
+                <ul class="submenu">
+                    <li class="submenu-link">
+                        <a href="#">
+                            <div class="nav-icon">
+                                <i class="bi bi-compass"></i>
+                            </div>
+                            <span class="link_name">Location</span>
+                        </a>
+                    </li>
+                    <li class="submenu-link">
+                        <a href="#">
+                            <div class="nav-icon">
+                                <i class="bi bi-inboxes-fill"></i>
+                            </div>
+                            <span class="link_name">Aset Sarana</span>
+                        </a>
+                    </li>
+                    <li class="submenu-link">
+                        <a href="#">
+                            <div class="nav-icon">
+                                <i class="bi bi-tools"></i>
+                            </div>
+                            <span class="link_name">Tools</span>
+                        </a>
+                    </li>
+                    <li class="submenu-link">
+                        <a href="#">
+                            <div class="nav-icon">
+                                <i class="bi bi-gear-wide-connected"></i>
+                            </div>
+                            <span class="link_name">Spare Part</span>
+                        </a>
+                    </li>
+                    <li class="submenu-link">
+                        <a href="#">
+                            <div class="nav-icon">
+                                <i class="bi bi-person-lines-fill"></i>
+                            </div>
+                            <span class="link_name">SDM</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="containerAccount">
+            <img src="img/user.jpg" alt="">
+            <div class="containerText">
+                <div class="name">Hendra Sugandi</div>
+                <div class="job">System Administrator</div>
+            </div>
+            <a href="login.html"><i class="bi bi-box-arrow-right"></i></a>
+        </div>
+    </div>
+    <section class="content">
+        <div class="row mt-4">
+            <div class="col-12 mb-3">
+                <div class="title-content">Sarana</div>
+            </div>
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="cardTotal totalBlue">
+                            <div class="containers">
+                                <div class="total-text">Total Sarana</div>
+                                <div class="count-text c-blue">174 Sarana</div>
+                            </div>
+                            <div class="badge badgeBlue">Kelola</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cardTotal totalOrange">
+                            <div class="containers">
+                                <div class="total-text">Total Karyawan</div>
+                                <div class="count-text c-orange">1.340 Karyawan</div>
+                            </div>
+                            <div class="badge badgeOrange">Kelola</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="statusCard">
+                            <div class="justify-sb">
+                                <div class="count">5</div>
+                                <div class="icon">
+                                    <i class="bi bi-train-front c-icon"></i>
+                                </div>
+                            </div>
+                            <div class="desc">Lokomotif</div>
+                            <img src="img/shape/shape-status.svg" alt="" class="shape">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="statusCard">
+                            <div class="justify-sb">
+                                <div class="count">6</div>
+                                <div class="icon">
+                                    <i class="bi bi-train-front c-icon"></i>
+                                </div>
+                            </div>
+                            <div class="desc">Kereta</div>
+                            <img src="img/shape/shape-status.svg" alt="" class="shape">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="statusCard">
+                            <div class="justify-sb">
+                                <div class="count">98</div>
+                                <div class="icon">
+                                    <i class="bi bi-train-front c-icon"></i>
+                                </div>
+                            </div>
+                            <div class="desc">Gerbong</div>
+                            <img src="img/shape/shape-status.svg" alt="" class="shape">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="statusCard">
+                            <div class="justify-sb">
+                                <div class="count">49</div>
+                                <div class="icon">
+                                    <i class="bi bi-train-front c-icon"></i>
+                                </div>
+                            </div>
+                            <div class="desc">Peralatan Khusus</div>
+                            <img src="img/shape/shape-status.svg" alt="" class="shape">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="statusCard">
+                            <div class="justify-sb">
+                                <div class="count">15</div>
+                                <div class="icon">
+                                    <i class="bi bi-train-front c-icon"></i>
+                                </div>
+                            </div>
+                            <div class="desc">Pesawat Ankat Angkut</div>
+                            <img src="img/shape/shape-status.svg" alt="" class="shape">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="statusCard">
+                            <div class="justify-sb">
+                                <div class="count">4</div>
+                                <div class="icon">
+                                    <i class="bi bi-train-front c-icon"></i>
+                                </div>
+                            </div>
+                            <div class="desc">Lain lain</div>
+                            <img src="img/shape/shape-status.svg" alt="" class="shape">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="borderCard">
+                            <div class="containerBar">
+                                <div class="title">sarana TSO / SO</div>
+                                <div id="barChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardPart">
+                    <div class="cardHead justify-sb">
+                        <div class="titleCard">Data SDM</div>
+                        <div class="justify-start gap-3">
+                            <div class="containerSearch">
+                                <input type="text" class="searchTable" placeholder="Search">
+                                <i class="bi bi-search"></i>
+                            </div>
+                            <button class="btn-blue-lg" data-bs-toggle="modal" data-bs-target="#tambah">Tambah</button>
+                        </div>
+                    </div>
+                    <div class="cardBody scrollX">
+                        <table class="table no-wrap" id="DTtable">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Bagian</th>
+                                    <th>Kompetensi</th>
+                                    <th>ID Sertifikasi</th>
+                                    <th>Masa Berlaku</th>
+                                    <th>Tempat Lahir</th>
+                                    <th>Tgl Lahir</th>
+                                    <th>Alamat</th>
+                                    <th>Email</th>
+                                    <th>Telp</th>
+                                    <th>Owner</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><div class="fw-5">Hendra</div></td>
+                                    <td>IT Tech</td>
+                                    <td>Komputasi</td>
+                                    <td>332100185</td>
+                                    <td>02 Jan 2024</td>
+                                    <td>Bandung</td>
+                                    <td>06 June 2000</td>
+                                    <td>
+                                        <div class="address-truncate">
+                                            Jl. Soekarno Hatta No. 293 Kb. Lega, Kec. Bojongloa kidul, Kab. Bandung, Kota Bandung
+                                        </div>
+                                    </td>
+                                    <td>example@gmail.com</td>
+                                    <td>0897866576</td>
+                                    <td>Jack</td>
+                                    <td>
+                                        <div class="btn-act">
+                                            <a href="#" class="btn-yellow"><i class="bi bi-pencil-square"></i></a>
+                                            <a href="#" class="btn-grey" data-bs-toggle="modal" data-bs-target="#tblDetail"><i class="bi bi-search"></i></a>
+                                            <a href="#" id="deleteFile" class="btn-red"><i class="bi bi-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">  
+                <div class="borderCard">
+                    <div class="containerKnob mb-0">
+                        <div class="title">Schedule Outstanding</div>
+                        <input type="text" class="dial" value="88" disabled>
+                        <div class="containerLegend">
+                            <div class="legend">
+                                <div class="square2"></div>
+                                <div class="text">TSO</div>
+                            </div>
+                            <div class="legend">
+                                <div class="square1"></div>
+                                <div class="text">SO</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="knobBar">
+                        <div class="barIcon">
+                            <i class="bi bi-train-front"></i>
+                        </div>
+                        <div class="containers">
+                            <div class="progressText">
+                                <div class="title">Lokomotif</div>
+                                <div class="desc"> <span class="fw-6">20</span> dari <span class="fw-6">50</span> Siap oprasi</div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="50"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="borderCard p-0">
+                    <div class="headerProfile">
+                        <img src="img/shape/shape1.svg" alt="" class="shape-1">
+                        <img src="img/shape/shape6.svg" alt="" class="shape-6">
+                    </div>
+                    <div class="contentProfile">
+                        <div class="containerUser">
+                            <img src="img/john.jpg" alt="" class="userImg">
+                        </div>
+                        <div class="containerName">
+                            <div class="name">Sugandul<i class="bi bi-pen"></i></div>
+                            <div class="job">System Administrator</div>
+                        </div>
+                        <div class="containerBio">
+                            <div class="title mb-2">Your Profile</div>
+                            <div class="containerText">
+                                <div class="text1">NIK</div>
+                                <div class="text2">GC110080</div>
+                            </div>
+                            <div class="containerText">
+                                <div class="text1">Jabatan</div>
+                                <div class="text2">System Administrator</div>
+                            </div>
+                            <div class="containerText">
+                                <div class="text1">Email</div>
+                                <div class="text2">example@gmail.com</div>
+                            </div>
+                            <div class="containerText">
+                                <div class="text1">Nomor Telepon</div>
+                                <div class="text2">0822322151</div>
+                            </div>
+                            <div class="containerText">
+                                <div class="text1">Alamat Rumah</div>
+                                <div class="text2"> Jl. Soekarno Hatta No. 293 Kb. Lega, Kec. Bojongloa kidul, Kota Bandung, Jawabarat 40235</div>
+                            </div>
+                        </div>
+                        <div class="containerBio">
+                            <div class="title mb-2">Lampiran</div>
+                            <div class="containerAttachment">
+                                <div class="justify-start gap-2">
+                                    <i class="bi bi-file-earmark-pdf"></i>
+                                    <div class="titleAttach">Curriculum Vitae</div>
+                                </div>
+                                <div class="justify-start">
+                                    <div class="docName">Document</div>
+                                    <div class="format">.pdf</div>
+                                </div>
+                            </div>
+                            <div class="containerAttachment">
+                                <div class="justify-start gap-2">
+                                    <i class="bi bi-file-earmark-pdf"></i>
+                                    <div class="titleAttach">Curriculum Vitae</div>
+                                </div>
+                                <div class="justify-start">
+                                    <div class="docName">Document_pendukung_rahasia</div>
+                                    <div class="format">.pdf</div>
+                                </div>
+                            </div>
+                            <div class="containerAttachment">
+                                <div class="justify-start gap-2">
+                                    <i class="bi bi-file-earmark-pdf"></i>
+                                    <div class="titleAttach">Sertifikasi</div>
+                                </div>
+                                <div class="justify-start">
+                                    <div class="docName">Document_rahasia</div>
+                                    <div class="format">.pdf</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="img/shape/shape6.svg" alt="" class="shape-card">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="tblDetail">
+        <div class="modal-dialog modal-dialog-centered" style="max-width:630px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="title">
+                        <div class="modal-title">Informasi SDM</div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="containerName">
+                                <img src="img/john.jpg" alt="" class="imgDetail">
+                                <div class="name">Sugandul</div>
+                                <div class="justify-center gap-2">
+                                    <i class="bi bi-file-earmark-pdf"></i>
+                                    <div class="titleAttach">Sertifikasi.pdf</div>
+                                </div>
+                            </div>
+                            <div class="containerDetail">
+                                <div class="containerText">
+                                    <div class="text1">NIK</div>
+                                    <div class="text2">GC110080</div>
+                                </div>
+                                <div class="containerText">
+                                    <div class="text1">Nama</div>
+                                    <div class="text2">Sugandul</div>
+                                </div>
+                                <div class="containerText">
+                                    <div class="text1">Bagian</div>
+                                    <div class="text2">System Administrator</div>
+                                </div>
+                                <div class="containerText">
+                                    <div class="text1">Kompetensi</div>
+                                    <div class="text2">Komputer</div>
+                                </div>
+                                <div class="containerText">
+                                    <div class="text1">ID Sertifikasi</div>
+                                    <div class="text2">121321</div>
+                                </div>
+                                <div class="containerText">
+                                    <div class="text1">Masa Berlaku</div>
+                                    <div class="text2">02 Jan 2024</div>
+                                </div>
+                                <div class="containerText">
+                                    <div class="text1">Tempat Lahir</div>
+                                    <div class="text2">Bandung</div>
+                                </div>
+                                <div class="containerText">
+                                    <div class="text1">Tanggal Lahir</div>
+                                    <div class="text2">12 Dec 1999</div>
+                                </div>
+                                <div class="containerText">
+                                    <div class="text1">Alamat Rumah</div>
+                                    <div class="text2">Jl. Soekarno Hatta No. 293 Kb. Lega, Kec. Bojongloa kidul, Kota Bandung, Jawabarat 40235</div>
+                                </div>
+                                <div class="containerText">
+                                    <div class="text1">Email</div>
+                                    <div class="text2">Example@gmail.com</div>
+                                </div>
+                                <div class="containerText">
+                                    <div class="text1">Telp</div>
+                                    <div class="text2">0897837847</div>
+                                </div>
+                                <div class="containerText">
+                                    <div class="text1">Owner</div>
+                                    <div class="text2">Jack</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tambah">
+        <div class="modal-dialog modal-dialog-centered" style="max-width:630px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="title">
+                        <div class="modal-title">Tambah SDM</div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="label-form">NIP</div>
+                            <input type="text" class="form-control mb-3" placeholder="Input NIP...">
+                        </div>
+                        <div class="col-12">
+                            <div class="label-form">Nama</div>
+                            <input type="text" class="form-control mb-3" placeholder="Input Nama...">
+                        </div>
+                        <div class="col-12">
+                            <div class="label-form">Bagian</div>
+                            <input type="text" class="form-control mb-3" placeholder="Input Bagian...">
+                        </div>
+                        <div class="col-12">
+                            <div class="label-form">Kompetensi</div>
+                            <input type="text" class="form-control mb-3" placeholder="Input Kompetensi...">
+                        </div>
+                        <div class="col-12">
+                            <div class="label-form">ID Sertifikasi</div>
+                            <input type="text" class="form-control mb-3" placeholder="Input ID Sertifikasi...">
+                        </div>
+                        <div class="col-12">
+                            <div class="label-form">Masa Berlaku</div>
+                            <input type="date" class="form-control mb-3" placeholder="Input Masa Berlaku...">
+                        </div>
+                        <div class="col-12">
+                            <div class="label-form">Tempat Lahir</div>
+                            <input type="text" class="form-control mb-3" placeholder="Input Tempat Lahir...">
+                        </div>
+                        <div class="col-12">
+                            <div class="label-form">Tanggal Lahir</div>
+                            <input type="date" class="form-control mb-3" placeholder="Input Tanggal Lahir...">
+                        </div>
+                        <div class="col-12">
+                            <div class="label-form">Alamat</div>
+                            <input type="text" class="form-control mb-3" placeholder="Input Alamat...">
+                        </div>
+                        <div class="col-12">
+                            <div class="label-form">Email</div>
+                            <input type="text" class="form-control mb-3" placeholder="Input Email...">
+                        </div>
+                        <div class="col-12">
+                            <div class="label-form">Telp</div>
+                            <input type="text" class="form-control mb-3" placeholder="Input Telp...">
+                        </div>
+                        <div class="col-12">
+                            <div class="label-form">Owner</div>
+                            <select class="form-control mb-3" name="" id="">
+                                <option value="" selected disabled>Select Owner</option>
+                                <option value="" >John</option>
+                                <option value="" >Jack</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn-blue-lg w-100">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap-5.3.2.min.js"></script>
+    <script src="js/datatables/dt.js"></script>
+    <script src="js/apexchart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/script.js"></script>
+    
+
+    <script>
+        var chartInit;
+    
+        $(document).ready(function () {
+
+            $('#DTtable').DataTable({
+                aLengthMenu: [
+                    [5, 10, 25, 50, -1],
+                    [5, 10, 25, 50, "All"]
+                ],
+                processing: true,
+                pageLength: 5,
+                responsive: true,
+                bInfo: false,
+                fixedColumns: {
+                    left: 0,
+                    right: 1
+                },
+                language: {
+                    'lengthMenu': 'Sort _MENU_',
+                }
+            });
+            
+            $(".dial").knob({
+                "readOnly": true,
+                lineCap: 'round',
+                thickness: 0.4,
+                fgColor: '#2E9CFF',
+                bgColor: '#E3F1FF',
+                width: 150,
+                height: 150,
+                draw: function () {
+                    $(this.i).css('position', 'absolute').css('font-size', '28px').css('font-weight', '500').css('color', '#007bff').css('font-family', 'poppins');
+                    $(this.i).val(this.cv + '%');
+                }
+            });
+
+            var options = {
+
+                labels: ['value 1', 'value 2'],
+                series: [{
+                    name: "TSO",
+                    data: [44, 55, 41, 64, 22, 43],
+                }, {
+                    name: "SO",
+                    data: [53, 32, 33, 52, 13, 44],
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 430,
+                    toolbar: {
+                        show: false
+                    }
+                },
+                dataLabels: {
+                    enabled: false,
+                },
+                stroke: {
+                    show: true,
+                    width: 1,
+                    colors: ['#fff']
+                },
+                tooltip: {
+                    shared: true,
+                    intersect: false
+                },
+                xaxis: {
+                    categories: ['Lokomotif', 'Kereta', 'Gerbong', 'Khusus', 'Angkat angkut', 'Lain lain'],
+                },
+            };
+
+            chartInit = new ApexCharts(document.querySelector("#barChart"), options);
+            chartInit.render();
+        })
+
+        $('#deleteFile').on('click', function (event) {
+            event.preventDefault();
+            const url = $(this).attr('href');
+            swal({
+                title: "Are You Sure..?",
+                text: "Data yang dihapus tidak akan bisa dikembalikan lagi !",
+                type: "warning",
+                showCancelButton: true,
+                cancelButtonColor: "#F4F6FB",
+                confirmButtonColor: "#2E9CFF",
+                confirmButtonText: "Yes",
+                cancelButtonText: "No ",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            },
+            function(isConfirm){
+                if (isConfirm) {
+                    // window.location.href = url;
+                    swal("Data Dihapus", "Data telah dihapus secara permanent.", "success");
+                } else {
+                    swal("Batal", "Data Anda Kembali Aman", "error");
+                }
+            }); 
+        });
+        
+    </script>
+    <script>
+        
+    </script>
+
+</body>
+</html>

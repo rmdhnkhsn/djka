@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <title> Dashboard DJKA</title>
         <link rel="stylesheet" href="css/font/poppins.css">
-        <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/datatables/dt.css">
-        <link rel="stylesheet" href="css/dashboard.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -31,7 +31,7 @@
             <img src="img/logo/djka.svg" alt="" class="djkaImg">
         </div>
         <ul class="nav-links">
-            <div class="titleNav">Beranda</div>
+            <!-- <div class="titleNav">Beranda</div> -->
             <li class="nav-menu menu-link">
                 <a href="#">
                     <div class="nav-icon">
@@ -40,46 +40,58 @@
                     <span class="link_name">Dashboard</span>
                 </a>
             </li>
-            <div class="titleNav mt-3">Master Data</div>
-            <li class="nav-menu menu-link">
-                <a href="#">
-                    <div class="nav-icon">
-                        <i class="bi bi-compass"></i>
-                    </div>
-                    <span class="link_name">Location</span>
-                </a>
-            </li>
-            <li class="nav-menu menu-link">
-                <a href="#">
-                    <div class="nav-icon">
-                        <i class="bi bi-inboxes-fill"></i>
-                    </div>
-                    <span class="link_name">Aset Sarana</span>
-                </a>
-            </li>
-            <li class="nav-menu menu-link">
-                <a href="#">
-                    <div class="nav-icon">
-                        <i class="bi bi-tools"></i>
-                    </div>
-                    <span class="link_name">Tools</span>
-                </a>
-            </li>
-            <li class="nav-menu menu-link">
-                <a href="#">
-                    <div class="nav-icon">
-                        <i class="bi bi-gear-wide-connected"></i>
-                    </div>
-                    <span class="link_name">Spare Part</span>
-                </a>
-            </li>
-            <li class="nav-menu menu-link">
-                <a href="#">
-                    <div class="nav-icon">
-                        <i class="bi bi-person-lines-fill"></i>
-                    </div>
-                    <span class="link_name">SDM</span>
-                </a>
+            <!-- <div class="titleNav mt-3">Master Data</div> -->
+            <li class="nav-menu menu-down">
+                <div class="arrow-link">
+                    <a href="#">
+                        <div class="nav-name">
+                            <div class="link_name">Master Data</div>
+                            <i class="bi bi-chevron-right arrow"></i>
+                        </div>
+                    </a>
+                </div>
+                <ul class="submenu">
+                    <li class="submenu-link">
+                        <a href="#">
+                            <div class="nav-icon">
+                                <i class="bi bi-compass"></i>
+                            </div>
+                            <span class="link_name">Location</span>
+                        </a>
+                    </li>
+                    <li class="submenu-link">
+                        <a href="#">
+                            <div class="nav-icon">
+                                <i class="bi bi-inboxes-fill"></i>
+                            </div>
+                            <span class="link_name">Aset Sarana</span>
+                        </a>
+                    </li>
+                    <li class="submenu-link">
+                        <a href="#">
+                            <div class="nav-icon">
+                                <i class="bi bi-tools"></i>
+                            </div>
+                            <span class="link_name">Tools</span>
+                        </a>
+                    </li>
+                    <li class="submenu-link">
+                        <a href="#">
+                            <div class="nav-icon">
+                                <i class="bi bi-gear-wide-connected"></i>
+                            </div>
+                            <span class="link_name">Spare Part</span>
+                        </a>
+                    </li>
+                    <li class="submenu-link">
+                        <a href="sdm.html">
+                            <div class="nav-icon">
+                                <i class="bi bi-person-lines-fill"></i>
+                            </div>
+                            <span class="link_name">SDM</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
         </ul>
         <div class="containerAccount">
@@ -94,7 +106,7 @@
     <section class="content">
         <div class="row mt-4">
             <div class="col-12 mb-4">
-                <div class="title-dashboard">Dashboard</div>
+                <div class="title-content">Dashboard</div>
             </div>
             <div class="col-lg-8">
                 <div class="containerStatus">
@@ -258,7 +270,6 @@
                         </table>
                     </div>
                 </div>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <div class="accordion">
                   <div class="accordionHead">
                     <div class="title">Frequently Asked Questions (FAQ)</div>
@@ -287,7 +298,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="containerBar ">
+                    <div class="containerBar">
                         <div class="title">Schedule Outstanding</div>
                         <div id="barChart"></div>
                     </div>
