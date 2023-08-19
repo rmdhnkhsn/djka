@@ -1387,3 +1387,80 @@ body {
 }
 
 
+.containerFile {
+    position: relative;
+    width: 100%;
+}
+#file-input {
+  display: none;
+}
+.uploadFile {
+  display: block;
+  position: relative;
+  border-radius: 16px;
+  background: #F4F6FB;
+  font-size: 1.12em;
+  font-weight: 500;
+  text-align: center;
+  padding: 1.12em 0;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.uploadFile i {
+    font-size: 60px;
+    color: #6B7C8E;
+}
+.uploadFile .labelClick {
+    color: #6B7C8E;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+.uploadFile .labelClick .click {
+    margin-right: 4px;
+    font-weight: 400;
+    text-decoration-line: underline;
+}
+.uploadFile .labelAlert {
+    color: #6B7C8E;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+#num-of-files {
+  font-weight: 400;
+  color: #444;
+  text-align: center;
+  margin: 1rem 0
+}
+.containerFile .uploadIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    background: #F4F6FB;
+}
+.containerFile .uploadIcon i {
+    font-size: 14px;
+    color: #2E9CFF;
+}
+.containerFile ul {
+  list-style-type: none;
+}
+.containerFile li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.4rem;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 20px;
+    border: 1px solid #F5F5F5;
+    background: #FFF;
+    color: #025bee;
+    margin-bottom: 1rem;
+}
